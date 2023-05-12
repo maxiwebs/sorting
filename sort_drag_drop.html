@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<title>Agnostic Draggable Library Examples</title>
+		<link href="https://www.cssscript.com/demo/sticky.css" rel="stylesheet" type="text/css">
+		<style type="text/css">
+			body {
+				padding: 50px;
+				background-color: #fafafa;
+			}
+
+			.scrollable {
+				position: relative;
+				width: 100%;
+				height: 700px;
+				overflow-y: auto;
+				border: 1px solid #000;
+			}
+
+			.container {
+				padding: 20px;
+				height: 1000px;
+			}
+
+			.draggable {
+				display: inline-block;
+				border: 1px solid #000;
+				background-color: #4338CA;
+				color: #fff;
+				padding: 20px;
+				width: 40px;
+				height: 40px;
+				cursor: pointer;
+				border-radius: 5px;
+			}
+
+			.droppable {
+				display: block;
+				border: 1px solid #000;
+				background-color: #374151;
+				color: #fff;
+				margin-top: 20px;
+				margin-bottom: 30px;
+				padding: 20px;
+				width: calc(100% - 40px);
+				height: 80px;
+			}
+			.droppable.ui-droppable-active {
+				border-color: blue;
+			}
+			.droppable.ui-droppable-hover {
+				border-color: red;
+			}
+
+			.column {
+				display: inline-block;
+				margin-right: 20px;
+				vertical-align: top;
+			}
+
+			.sortable {
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			.sortable li {
+				display: block;
+				border: 1px solid #000;
+				background-color: #4338CA;
+				color: #fff;
+				padding: 10px;
+				width: 100px;
+				height: 20px;
+				cursor: pointer;
+			}
+		</style>
+		<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/agnostic-draggable@1.0.2/dist/agnostic-draggable.min.js"></script>
+	</head>
+	<body>
+
+		<div class="scrollable">
+			<div class="container">
+				<h1>Agnostic Draggable Library Examples</h1>
+		<div class="css-script-ads" style="margin:30px auto"><div id="carbon-block"></div>
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- CSSScript Demo Page -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:728px;height:90px"
+     data-ad-client="ca-pub-2783044520727903"
+     data-ad-slot="3025259193"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+				<div id="drag1" class="draggable">
+					<span class="handle">1</span>
+				</div>
+				<div id="drag2" class="draggable">
+					<span class="handle">2</span>
+				</div>
+				<div id="drag3" class="draggable">
+					<span class="handle">3</span>
+				</div>
+				<div id="drag4" class="draggable">
+					<span class="handle">4</span>
+				</div>
+				<div id="drag5" class="draggable">
+					<span class="handle">5</span>
+				</div>
+                <div id="drag6" class="draggable">
+					<span class="handle">6</span>
+				</div>
+                <div id="drag7" class="draggable">
+					<span class="handle">7</span>
+				</div>
+                <div id="drag8" class="draggable">
+					<span class="handle">8</span>
+				</div>
+                <div id="drag9" class="draggable">
+					<span class="handle">9</span>
+				</div>
+
+				<div id="drop1" class="droppable">Drop Here!</div>
+				<div class="column">
+					<ul id="sort1" class="sortable">
+						<li>
+							<span>Sort Me 10!</span>
+						</li>
+						<li>
+							<span>Sort Me 3!</span>
+						</li>
+						<li>
+							<span>Sort Me 8!</span>
+						</li>
+						<li>
+							<span>Sort Me 2!</span>
+						</li>
+						<li>
+							<span>Sort Me 5!</span>
+						</li>
+						<li>
+							<span>Sort Me 4!</span>
+						</li>
+                        <li>
+							<span>Sort Me 1!</span>
+						</li>
+                        <li>
+							<span>Sort Me 7!</span>
+						</li>
+                        <li>
+							<span>Sort Me 9!</span>
+						</li>
+                        <li>
+							<span>Sort Me 6!</span>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript">
+			document.querySelectorAll('.draggable').forEach(function (element) {
+				new agnosticDraggable.Draggable(element, {
+					appendTo: 'body',
+					connectToSortable: '.sortable',
+					containment: 'parent',
+					cursor: 'move',
+					distance: 10,
+					helper: 'original',
+					opacity: 0.5,
+					stack: '.draggable'
+				});
+			});
+			new agnosticDraggable.Droppable(document.querySelector('.droppable'));
+			document.querySelectorAll('.sortable').forEach(function (element) {
+				new agnosticDraggable.Sortable(element, {
+					connectWith: '.sortable',
+					cursor: 'move',
+					helper: 'clone',
+					opacity: 0.5,
+					distance: 10
+				});
+			});
+		</script>
+		<script>
+try {
+  fetch(new Request("https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js", { method: 'HEAD', mode: 'no-cors' })).then(function(response) {
+    return true;
+  }).catch(function(e) {
+    var carbonScript = document.createElement("script");
+    carbonScript.src = "//cdn.carbonads.com/carbon.js?serve=CE7DC2JW&placement=wwwcssscriptcom";
+    carbonScript.id = "_carbonads_js";
+    document.getElementById("carbon-block").appendChild(carbonScript);
+  });
+} catch (error) {
+  console.log(error);
+}
+</script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-46156385-1', 'cssscript.com');
+  ga('send', 'pageview');
+
+</script>
+	</body>
+</html>
